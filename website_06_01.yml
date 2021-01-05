@@ -1,0 +1,7 @@
+ - name: Installing packages using playbook
+   hosts: db_web_server*
+   tasks: 
+           - name: Installing docker
+             yum: 
+                    name: ['tree','httpd']
+                    state: absent

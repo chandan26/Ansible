@@ -1,0 +1,5 @@
+- hosts: all
+ 
+  tasks:
+  - name : Uninstall nginx package
+    yum: name=tree state=absent

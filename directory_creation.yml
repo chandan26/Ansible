@@ -1,0 +1,7 @@
+- name: Creating a folder in Node
+  hosts: db_web_server*
+  tasks:
+          - name: creating the folder
+            file:
+                    path: /var/choice
+                    state: directory

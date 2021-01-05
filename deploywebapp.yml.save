@@ -1,0 +1,6 @@
+ - hosts: db_web_server*
+   
+   tasks:
+       yum: ['wget','http','python','python-setuptools','python-dev','build-essential','python-pip','mysql-server', 'mysql-client']
+       state: present
+       update_cache: True

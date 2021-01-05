@@ -1,0 +1,10 @@
+- hosts: all
+  user: ansible
+  become: True
+  tasks:
+    - name: Install vsftpd package
+      yum:
+        name: ['unzip','redis']
+        state: present
+        update_cache: True
+

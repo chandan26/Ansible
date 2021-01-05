@@ -1,0 +1,10 @@
+- hosts: all
+  user: ansible
+  become: True
+  tasks:
+    - name: Install vsftpd package
+      yum:
+        name: git
+        state: absent
+        update_cache: True
+

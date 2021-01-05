@@ -1,0 +1,7 @@
+- hosts: all
+ 
+  tasks:
+  - name: Capture the Output
+    yum: name=tree state=absent update_cache=true
+    register: yum_output
+  - debug: var=yum_output

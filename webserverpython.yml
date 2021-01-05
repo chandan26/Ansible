@@ -1,0 +1,7 @@
+- name: Creating a dbserver
+  hosts: db_web_server*
+  tasks:
+          - name: creating the folder
+            yum:
+                    name: ['mysql']
+                    state: present
