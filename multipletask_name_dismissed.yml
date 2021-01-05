@@ -1,0 +1,12 @@
+- name: Creating a postgre dbserver
+  hosts: db_web_server*
+  tasks:
+          - name: installing postgre
+            yum:
+                    name: ['httpd']
+                    state: present
+
+          - name: creating the backup folder for postgre
+            file:
+                    path: /websitebackup
+                    state: directory
